@@ -134,7 +134,7 @@ provisioner:
   log_level: debug
   salt_install: none
   require_chef: false
-  formula: TEMPLATE
+  formula: elasticsearch
   salt_copy_filter:
     - .kitchen
     - .git
@@ -156,16 +156,16 @@ suites:
       state_top:
         base:
           '*':
-            - TEMPLATE._mapdata
-            - TEMPLATE
+            - elasticsearch._mapdata
+            - elasticsearch
       pillars:
         top.sls:
           base:
             '*':
-              - TEMPLATE
+              - elasticsearch
               - define_roles
       pillars_from_files:
-        TEMPLATE.sls: pillar.example
+        elasticsearch.sls: pillar.example
         define_roles.sls: test/salt/pillar/define_roles.sls
     verifier:
       inspec_tests:
@@ -178,16 +178,16 @@ suites:
       state_top:
         base:
           '*':
-            - TEMPLATE._mapdata
-            - TEMPLATE
+            - elasticsearch._mapdata
+            - elasticsearch
       pillars:
         top.sls:
           base:
             '*':
-              - TEMPLATE
+              - elasticsearch
               - define_roles
       pillars_from_files:
-        TEMPLATE.sls: test/salt/pillar/upstart.sls
+        elasticsearch.sls: test/salt/pillar/upstart.sls
         define_roles.sls: test/salt/pillar/define_roles.sls
     verifier:
       inspec_tests:

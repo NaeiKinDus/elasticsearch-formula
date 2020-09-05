@@ -12,23 +12,23 @@
 ---
 Debian:
   pkg:
-    name: TEMPLATE-debian
-  config: /etc/TEMPLATE.d/custom.conf
+    name: elasticsearch-debian
+  config: /etc/elasticsearch.d/custom.conf
 
 RedHat:
   pkg:
-    name: TEMPLATE-redhat
-  config: /etc/TEMPLATE.conf
+    name: elasticsearch-redhat
+  config: /etc/elasticsearch.conf
 
 Suse:
   pkg:
-    name: TEMPLATE-suse
+    name: elasticsearch-suse
 
 Gentoo: {}
 
 Arch:
   pkg:
-    name: TEMPLATE-arch
+    name: elasticsearch-arch
   service:
     name: service-arch
 

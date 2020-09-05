@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 ---
-TEMPLATE:
+elasticsearch:
   pkg:
-    name: TEMPLATE
+    name: elasticsearch
   rootgroup: root
-  config: '/etc/TEMPLATE'
+  config: '/etc/elasticsearch'
   service:
-    name: TEMPLATE
+    name: elasticsearch
   subcomponent:
-    config: '/etc/TEMPLATE-subcomponent-formula.conf'
+    config: '/etc/elasticsearch-subcomponent-formula.conf'
   # Just here for testing
   added_in_defaults: defaults_value
   winner: defaults
